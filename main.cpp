@@ -22,7 +22,15 @@ void printMenu()
     std::cout << "6: Continue " << std::endl;
 
     std::cout << "===============" << std::endl;
+}
+
+int getUserOption()
+{
+    int userOption;
     std::cout << "Type in 1-6" << std::endl;
+    std::cin >> userOption;
+    std::cout << "You chose: " << userOption << std::endl;
+    return userOption;
 }
 
 int main()
@@ -31,9 +39,7 @@ int main()
     {
         printMenu();
 
-        int userOption;
-        std::cin >> userOption;
-        std::cout << "You chose: " << userOption << std::endl;
+        int userOption = getUserOption();
 
         if (userOption == 0)
         {
