@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 // prints available menu to user
 void printMenu()
@@ -35,6 +36,36 @@ int getUserOption()
     return userOption;
 }
 
+void printHelp()
+{
+    std::cout << "Help - your aim is to make money. Analyze the market and make bids." << std::endl;
+}
+
+void printMarketStats()
+{
+    std::cout << "Market looks good" << std::endl;
+}
+
+void enterOffer()
+{
+    std::cout << "Make and offer - enter the amount" << std::endl;
+}
+
+void enterBid()
+{
+    std::cout << "Make a bid - enter the amount" << std::endl;
+}
+
+void printWallet()
+{
+    std::cout << "Your wallet is empty. " << std::endl;
+}
+
+void gotoNextTimeframe()
+{
+    std::cout << "Going to the next time frame. " << std::endl;
+}
+
 // takes the userinput and print message accordingly
 void processUserOption(int userOption)
 {
@@ -44,32 +75,39 @@ void processUserOption(int userOption)
     }
     if (userOption == 1)
     {
-        std::cout << "Help - your aim is to make money. Analyze the market and make bids." << std::endl;
+        printHelp();
     }
     if (userOption == 2)
     {
-        std::cout << "Market looks good" << std::endl;
+        printMarketStats();
     }
     if (userOption == 3)
     {
-        std::cout << "Make and offer - enter the amount" << std::endl;
+        enterOffer();
     }
     if (userOption == 4)
     {
-        std::cout << "Make a bid - enter the amount" << std::endl;
+        enterBid();
     }
     if (userOption == 5)
     {
-        std::cout << "Your wallet is empty. " << std::endl;
+        printWallet();
     }
     if (userOption == 6)
     {
-        std::cout << "Going to the next time frame. " << std::endl;
+        gotoNextTimeframe();
     }
 }
 
 int main()
 {
+    // create book model
+    double price = 0.02187308;
+    double amount = 7.44564869;
+    std::string timestamp{"2020/03/17 17:01:24.884492"};
+    std::string product{"ETH/BTC"};
+    std::string orderType{"Bid"};
+
     while (true)
     {
         printMenu();
