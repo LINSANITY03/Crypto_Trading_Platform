@@ -11,6 +11,21 @@ enum class OrderBookType
 class OrderBookEntry
 {
 public:
+    // creating a constructor
+    OrderBookEntry(double price,
+                   double amount,
+                   std::string timestamp,
+                   std::string product,
+                   OrderBookType orderType)
+
+    // inserting the value of constructor to this. classes variables
+    {
+        this->price = price;
+        this->amount = amount;
+        this->timestamp = timestamp;
+        this->product = product;
+        this->orderType = orderType;
+    }
     double price;
     double amount;
     std::string timestamp;
@@ -118,12 +133,7 @@ void processUserOption(int userOption)
 
 int main()
 {
-    OrderBookEntry order1;
-    order1.price = 10000;
-    order1.amount = 0.002;
-    order1.timestamp = "2020/03/17 17:01:24.884492";
-    order1.product = "BTC/USDT";
-    order1.orderType = OrderBookType::bid;
+    OrderBookEntry order1{10000, 0.002, "2020/03/17 17:01:24.884492", "BTC/USDT", OrderBookType::bid};
 
     std::cout << "The price is " << order1.price << std::endl;
 }
