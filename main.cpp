@@ -1,5 +1,22 @@
 #include <iostream>
 #include <string>
+#include <vector>
+
+enum class OrderBookType
+{
+    bid,
+    ask
+};
+
+class OrderBookEntry
+{
+public:
+    double price;
+    double amount;
+    std::string timestamp;
+    std::string product;
+    OrderBookType orderType;
+};
 
 // prints available menu to user
 void printMenu()
@@ -101,20 +118,12 @@ void processUserOption(int userOption)
 
 int main()
 {
-    // create book model
-    double price = 0.02187308;
-    double amount = 7.44564869;
-    std::string timestamp{"2020/03/17 17:01:24.884492"};
-    std::string product{"ETH/BTC"};
-    std::string orderType{"Bid"};
+    OrderBookEntry order1;
+    order1.price = 10000;
+    order1.amount = 0.002;
+    order1.timestamp = "2020/03/17 17:01:24.884492";
+    order1.product = "BTC/USDT";
+    order1.orderType = OrderBookType::bid;
 
-    while (true)
-    {
-        printMenu();
-
-        int userOption = getUserOption();
-        processUserOption(userOption);
-    }
-
-    return 0;
+    std::cout << "The price is " << order1.price << std::endl;
 }
