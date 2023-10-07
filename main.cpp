@@ -11,21 +11,21 @@ enum class OrderBookType
 class OrderBookEntry
 {
 public:
-    // creating a constructor
+    // creating a constructor with initializtion list
     OrderBookEntry(double price,
                    double amount,
                    std::string timestamp,
                    std::string product,
-                   OrderBookType orderType)
+                   OrderBookType orderType) : price(price),
+                                              amount(amount),
+                                              timestamp(timestamp),
+                                              product(product),
+                                              orderType(orderType)
 
     // inserting the value of constructor to this. classes variables
     {
-        this->price = price;
-        this->amount = amount;
-        this->timestamp = timestamp;
-        this->product = product;
-        this->orderType = orderType;
     }
+
     double price;
     double amount;
     std::string timestamp;
