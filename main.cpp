@@ -133,7 +133,9 @@ void processUserOption(int userOption)
 
 int main()
 {
-    OrderBookEntry order1{10000, 0.002, "2020/03/17 17:01:24.884492", "BTC/USDT", OrderBookType::bid};
+    std::vector<OrderBookEntry> orders;
+    orders.push_back(
+        OrderBookEntry{10000, 0.002, "2020/03/17 17:01:24.884492", "BTC/USDT", OrderBookType::bid});
 
-    std::cout << "The price is " << order1.price << std::endl;
+    std::cout << "The price is " << orders[0].price << std::endl;
 }
