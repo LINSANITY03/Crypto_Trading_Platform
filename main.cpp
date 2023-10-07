@@ -137,5 +137,20 @@ int main()
     orders.push_back(
         OrderBookEntry{10000, 0.002, "2020/03/17 17:01:24.884492", "BTC/USDT", OrderBookType::bid});
 
-    std::cout << "The price is " << orders[0].price << std::endl;
+    // without & it create a copy of each order when we iterate
+    for (OrderBookEntry &order : orders)
+    {
+        std::cout << "The price is " << order.price << std::endl;
+    }
+
+    // alternative ways to iterate over vector
+    for (unsigned int i = 0; i < orders.size(); ++i)
+    {
+        std::cout << "The price is " << orders[i].price << std::endl;
+    }
+
+    for (unsigned int i = 0; i < orders.size(); ++i)
+    {
+        std::cout << "The price is " << orders.at(i).price << std::endl;
+    }
 }
