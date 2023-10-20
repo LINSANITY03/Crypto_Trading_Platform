@@ -3,7 +3,7 @@ class MerkelMain
 {
 public:
     MerkelMain();
-
+    /** start the app*/
     void init();
 
     void printMenu();
