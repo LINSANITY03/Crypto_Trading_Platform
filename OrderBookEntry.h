@@ -14,11 +14,7 @@ public:
                    double amount,
                    std::string timestamp,
                    std::string product,
-                   OrderBookType orderType) : price(price),
-                                              amount(amount),
-                                              timestamp(timestamp),
-                                              product(product),
-                                              orderType(orderType);
+                   OrderBookType orderType);
 
     double price;
     double amount;
