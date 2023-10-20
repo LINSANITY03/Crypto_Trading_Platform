@@ -2,37 +2,6 @@
 #include <string>
 #include <vector>
 
-enum class OrderBookType
-{
-    bid,
-    ask
-};
-
-class OrderBookEntry
-{
-public:
-    // creating a constructor with initializtion list
-    OrderBookEntry(double price,
-                   double amount,
-                   std::string timestamp,
-                   std::string product,
-                   OrderBookType orderType) : price(price),
-                                              amount(amount),
-                                              timestamp(timestamp),
-                                              product(product),
-                                              orderType(orderType)
-
-    // inserting the value of constructor to this. classes variables
-    {
-    }
-
-    double price;
-    double amount;
-    std::string timestamp;
-    std::string product;
-    OrderBookType orderType;
-};
-
 // prints available menu to user
 void printMenu()
 {
