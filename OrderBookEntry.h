@@ -1,3 +1,5 @@
+// only include this file once
+#pragma once
 #include <string>
 
 enum class OrderBookType

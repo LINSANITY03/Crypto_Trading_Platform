@@ -10,11 +10,6 @@ int main()
     app.init();
 }
 
-//     std::vector<OrderBookEntry> orders;
-//     orders.push_back(OrderBookEntry{10000, 0.002, "2020/03/17 17:01:24.884492", "BTC/USDT", OrderBookType::bid});
-//     orders.push_back(OrderBookEntry{3000, 0.02187008, "2020/03/17 17:01:24.884492", "ETH/BTC", OrderBookType::bid});
-//     orders.push_back(OrderBookEntry{5000, 0.002, "2020/03/17 17:01:29.884492", "BTC/USDT", OrderBookType::bid});
-
 //     // without & it create a copy of each order when we iterate
 //     // for (OrderBookEntry &order : orders)
 //     // {
