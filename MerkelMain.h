@@ -6,6 +6,7 @@ public:
     /** start the app*/
     void init();
 
+private:
     void printMenu();
 
     int getUserOption();
